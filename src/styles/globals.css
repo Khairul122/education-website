@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-primary: #442a22;
+  --color-secondary: #00639a;
+  --color-tertiary: #1e3700;
+  --color-background: #fbfbe2;
+  --color-surface: #fbfbe2;
+  --color-on-surface: #1b1d0e;
+  --color-on-surface-variant: #504441;
+  --color-primary-container: #5d4037;
+  --color-secondary-container: #51b2fe;
+  --color-tertiary-container: #2e5000;
+  --color-on-tertiary-container: #8ec64c;
+  --color-surface-container-low: #f5f5dc;
+  --color-surface-container: #efefd7;
+  --color-outline: #827470;
+  --color-outline-variant: #d4c3be;
+  --color-primary-fixed: #f9ded5;
+
+  --font-family-montserrat: "Montserrat", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
+  --font-family-mono: "JetBrains Mono", monospace;
+
+  --backdrop-blur-glass: 12px;
+  --backdrop-blur-glass-heavy: 24px;
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+.molecular-bg {
+  background-color: #fbfbe2;
+  background-image:
+    radial-gradient(circle at 2px 2px, rgba(93, 64, 55, 0.05) 1px, transparent 0),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 20px,
+      rgba(142, 198, 76, 0.02) 20px,
+      rgba(142, 198, 76, 0.02) 40px
+    );
+  background-size: 24px 24px, 80px 80px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.glass-heavy {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  box-shadow: 0px 8px 32px rgba(93, 64, 55, 0.1);
+}
